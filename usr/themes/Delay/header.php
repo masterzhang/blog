@@ -27,12 +27,12 @@
     <link href="<?php $this->options->themeUrl('css/link.css'); ?>" type="text/css" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/about.css'); ?>" type="text/css" rel="stylesheet">
     <script src="<?php $this->options->themeUrl('js/jquery-3.1.0.min.js'); ?>"></script>
-    <script async src="<?php $this->options->themeUrl('js/base.js'); ?>"></script>
-    <script async src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
-    <script async src="<?php $this->options->themeUrl('js/fastclick.js'); ?>"></script>
+    <script  src="<?php $this->options->themeUrl('js/base.js'); ?>"></script>
+    <script  src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+    <script  src="<?php $this->options->themeUrl('js/fastclick.js'); ?>"></script>
     <!--[if lt IE 9]>
-    <script async src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-    <script async src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
+    <script  src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script  src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
     <!-- 通过自有函数输出HTML头部信息 -->
