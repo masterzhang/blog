@@ -1,0 +1,46 @@
+$formColor: #7C7C8C;
+$tagColor: #FF494B;
+body {
+  &.tags {
+    & section {
+      background-color: white;
+      padding: 2rem;
+      & form {
+        position: relative;
+        height: 2.65rem;
+        line-height: 2.5rem;
+        border: 1px solid $formColor;
+        #wrap {
+          margin-right: 4.5rem;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        #keyword {
+          width: 100%;
+          height: 2.5rem;
+          margin: 0rem;
+          padding: 0.5rem;
+          border: none;
+          position: absolute;
+          left: 0rem;
+          top:0rem;
+          font-size: 1rem;
+        }
+        .submit {
+          width: 4.5rem;
+          height: 2.5rem;
+          margin: 0rem;
+          padding: 0rem;
+          border: none;
+          position: absolute;
+          right: 0rem;
+          top: 0rem;
+          font-size: 1rem;
+          background-color: #E7E7E7;
+          border-left: 1px solid $formColor;
+        }
+      }
+    }
+  }
+}

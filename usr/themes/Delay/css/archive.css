@@ -1,0 +1,57 @@
+body.archive section {
+  background-color: white;
+  padding: 1rem;
+}
+body.archive section h1 {
+  margin: 1rem 1rem;
+  color: black;
+  font-size: 2rem;
+}
+body.archive section h3 {
+  margin: 0.5rem 1rem;
+  color: black;
+  font-size: 1.5rem;
+}
+body.archive section h4 {
+  margin: 0.2rem 1rem;
+  font-size: 1.2rem;
+}
+body.archive section .section {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+body.archive section ul li {
+  list-style: none;
+  height: 2rem;
+  line-height: 2rem;
+  overflow: hidden;
+  padding-right: 0.1rem;
+  font-size: 1rem;
+}
+body.archive section ul li i {
+  font-size: 1rem;
+}
+body.archive section ul li a {
+  display: inline-block;
+  color: #7C7C8C;
+  text-decoration: none;
+}
+body.archive section ul li a:hover {
+  color: #337ab7;
+}
+body.archive section ul li span {
+  font-style: italic;
+  float: right;
+}
+
+@media screen and (max-width: 2048px) {
+  body.archive section ul li span {
+    display: inline;
+  }
+}
+@media screen and (max-width: 768px) {
+  body.archive section ul li span {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=archive.css.map */

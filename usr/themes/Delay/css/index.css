@@ -1,0 +1,16 @@
+.home section div.articles {
+  margin: 0;
+  padding: 0;
+}
+.home section div.articles div.article {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #EEF2F8;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 10px #EEF2F8;
+  -moz-box-shadow: 0 1px 10px #EEF2F8;
+  box-shadow: 0 1px 10px #EEF2F8;
+}
+
+/*# sourceMappingURL=index.css.map */

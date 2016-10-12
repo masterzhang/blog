@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,SAAM;EACJ,gBAAgB,EAAE,KAAK;;AACvB,iBAAU;EACR,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,SAAS;;AAClB,oBAAK;EACH,aAAa,EAAE,MAAM;;AAGzB,gBAAS;EACP,UAAU,EAAE,IAAI",
+"sources": ["../scss/link.scss"],
+"names": [],
+"file": "link.css"
+}

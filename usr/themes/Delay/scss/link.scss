@@ -1,0 +1,15 @@
+body {
+  &.link{
+    background-color: white;
+    & section {
+      background-color: white;
+      padding: 1rem 2rem;
+      & h1 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    & .links {
+      margin-top: 2rem;
+    }
+  }
+}

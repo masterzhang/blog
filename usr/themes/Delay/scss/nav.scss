@@ -1,0 +1,138 @@
+@mixin nav_style($width: 0rem, $left:0rem,$show:false) {
+  nav {
+    width: $width;
+    height: 100%;
+    position: fixed;
+    left: $left;
+    top: 0;
+    overflow: auto;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    & li {
+      text-align: center;
+      & .blogName {
+        font-size: 1.2rem;
+      }
+      & .navLink {
+        display: block;
+        text-decoration: none;
+        margin-top: 1.5rem;
+        & i {
+          vertical-align: baseline;
+        }
+        @if $show {
+          padding-left: 2rem;
+          text-align: left;
+          font-size: 1.2rem;
+          & i {
+            font-size: 1.2rem;
+          }
+          & span {
+            margin-left: 2rem;
+            display: inline;
+          }
+        } @else {
+          padding-left: 0;
+          text-align: center;
+          & i {
+            font-size: 1.5rem;
+          }
+          & span {
+            display: none;
+          }
+        }
+      }
+      & .navLastLink {
+        & .navLastLineLink {
+          text-decoration: none;
+          margin-top: 1.5rem;
+          & i {
+            vertical-align: baseline;
+          }
+        }
+        @if $show {
+          margin-top: 1.5rem;
+          padding-left: 2rem;
+          text-align: left;
+          font-size: 1.2rem;
+          & i {
+            font-size: 1.2rem;
+          }
+          & .navLastLineLink {
+            display: inline;
+            margin-right: 2rem;
+          }
+        } @else {
+          margin-top: 0;
+          padding-left: 0;
+          text-align: center;
+          & i {
+            font-size: 1.5rem;
+          }
+          & .navLastLineLink {
+            display: block;
+            margin-right: 0;
+          }
+        }
+      }
+      @if $show {
+        & .blogName {
+          display: inline;
+        }
+      } @else {
+        & .blogName {
+          display: none;
+        }
+      }
+    }
+    & .navIcon{
+      width: $width/2;
+      height: $width/2;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    & .left_mark {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top:0;
+      left: 0;
+      & i {
+        font-size: 3rem;
+        color: #FF494B;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  @include nav_style(15rem, 0rem, true);
+}
+
+@media screen and (max-width: 1023px) {
+  @include nav_style(6rem, 0rem, false);
+}
+
+@media screen and (max-width: 767px) {
+  @include nav_style(15rem, -15rem, true);
+}
+
+@keyframes navOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -15rem;
+  }
+}
+
+@keyframes navIn {
+  from {
+    left: -15rem;
+  }
+  to {
+    left: 0;
+  }
+}

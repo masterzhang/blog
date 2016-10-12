@@ -1,0 +1,14 @@
+body {
+  &.content{
+    background-color: white;
+    & section {
+      background-color: white;
+      padding: 1rem 2rem;
+      text-align: justify;
+      & h1 {
+        margin-bottom: 0.5rem;
+        color: black;
+      }
+    }
+  }
+}
