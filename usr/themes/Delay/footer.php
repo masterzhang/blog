@@ -33,7 +33,7 @@
         FastClick.attach(document.body);
     });
     var sidebar = document.getElementById('sidebar');
-    obj.addEventListener('touchmove', function(event) {
+    sidebar.addEventListener('touchmove', function(event) {
          // 如果这个元素的位置内只有一个手指的话
         if (event.targetTouches.length == 1) {
     　　　　 event.preventDefault();// 阻止浏览器默认事件，重要
