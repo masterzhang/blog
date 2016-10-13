@@ -24,7 +24,7 @@ $this->need('header.php');
             <div>
                 <h3>标签</h3>
                 <div>
-                <?php Typecho_Widget::widget('Widget_Metas_Tag_Cloud', array('sort' => 'count', 'ignoreZeroCount' => true, 'desc' => true))->to($tags); ?>
+                <?php Typecho_Widget::widget('Widget_Metas_Tag_Cloud', 'pageSize=10000',array('sort' => 'count', 'ignoreZeroCount' => true, 'desc' => true))->to($tags); ?>
 
                 <?php if($tags->have()): ?>
 
