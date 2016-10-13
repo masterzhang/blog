@@ -1,4 +1,4 @@
-<nav>
+<nav id="sidebar">
     <ul>
         <li>
             <a href="#"><img src="<?php $this->options->UserIcon();?>" class="navIcon"></a>
