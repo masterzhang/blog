@@ -37,7 +37,6 @@
           //如果这个元素的位置内只有一个手指的话
         if (event.targetTouches.length == 1) {
     　　　　 event.stopPropagation();
-            console.log('stop');
             }
     }, false);
     <?php
