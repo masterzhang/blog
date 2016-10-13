@@ -1,60 +1,64 @@
 <?php
 /**
- * 时间归档
+ * 普通列表
  *
  * @package custom
  */
+
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
-<body class="archive">
+<body class="home">
 <?php $this->need('nav.php'); ?>
 <div class="main">
     <?php $this->need('title.php'); ?>
     <section>
-        <h1><?php $this->title() ?></h1>
-        <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);
-        $year = 0;
-        $mon = 0;
-        $output = '';
-        while ($archives->next()):
-            $year_tmp = date('Y', $archives->created);
-            $mon_tmp = date('m', $archives->created);
-            $day_tmp = date('d', $archives->created);
-            if ($mon != $mon_tmp && $mon > 0) $output .= '</ul></div>';
-            if ($year != $year_tmp && $year > 0) $output .= '</div>';
-            if ($year != $year_tmp) {
-                $year = $year_tmp;
-                $output .= ' <div><h3>' . $year . '&nbsp;&nbsp;年</h3>'; //输出年份
-                if ($mon == $mon_tmp) {
-                    $year = $year_tmp;
-                    $mon = $mon_tmp;
-                    $output .= '<div class="section">
-                <h4>'.$mon.'&nbsp;&nbsp;月</h4>
-                <ul>'; //输出月份
-                }
-
-
-            }
-
-            if ($mon != $mon_tmp) {
-
-                $year = $year_tmp;
-                $mon = $mon_tmp;
-                $output .= '<div class="section">
-                <h4>'.$mon.'&nbsp;&nbsp;月</h4>
-                <ul>'; //输出月份
-            }
-
-
-            $output .= '<li>
-                        <i class="iconfont">&#xe603;</i>
-                        <a href="'.$archives->permalink .'">'. $archives->title .'</a>
-                        <span>'.$year.'年'.$mon.'月'.$day_tmp.'日</span>
-                    </li>'; //输出文章日期和标题
-        endwhile;
-        $output .= '</div>';
-        echo $output;
-        ?>
+        <div class="articles">
+            <?php if ($this->have()): ?>
+                <?php while ($this->next()): ?>
+                    <div class="article">
+                        <article>
+                            <h1 class="title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
+                            <div class="author">
+                                <div href="#" class="target"><?php $this->category(','); ?></div>
+                                <span><i class="iconfont">&#xe615;</i></span>
+                                <a href="<?php $this->author->permalink(); ?>"
+                                   class="username"><?php $this->author(); ?></a>
+                                <span><i class="iconfont">&#xe617;</i></span>
+                                <span class="time"><?php $this->date('Y-m-d'); ?></span>
+                                <span><i class="iconfont">&#xe60d;</i></span>
+                                <span class="time"><?php get_post_view($this) ?></span>
+                            </div>
+                            <div class="content">
+                                <?php $this->content('Continue Reading...'); ?>
+                            </div>
+                            <div class="footer">
+                                <a href="<?php $this->permalink() ?>">阅读全文</a>
+                            </div>
+                        </article>
+                    </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+            <div class="article">
+                <article>
+                    <h1 class="title">
+                        <?php if ($this->is('category')) : ?>该分类下没有任何文章。<?php else: ?><?php if ($this->is('tag')) : ?>该标签下没有任何文章。<?php else: ?>暂无与之相关文章<?php endif; ?><?php endif; ?>
+                    </h1>
+                </article>
+                <div/>
+                <?php endif; ?>
+            </div>
+            <div class="page-nav">
+                <?php $this->pageNav('&lt;', '&gt;', 3, '...', array(
+                    'itemTag' => 'li',
+                    'textTag' => 'span',
+                    'currentClass' => 'disabled',
+                    'prevClass' => 'prev',
+                    'nextClass' => 'next',
+                    'wrapTag' => 'ul',
+                    'wrapClass' => 'pagination'
+                ));
+                ?>
+            </div>
     </section>
     <?php $this->need('footer.php'); ?>
