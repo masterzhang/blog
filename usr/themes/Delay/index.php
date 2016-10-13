@@ -24,7 +24,7 @@ $this->need('header.php');
                     <article>
                         <h1 class="title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
                         <div class="author">
-                            <div href="#" class="target"><?php $this->tags(',', true, 'none'); ?></div>
+                            <div href="#" class="target"><?php $this->category(','); ?></div>
                             <span><i class="iconfont">&#xe615;</i></span>
                             <a href="<?php $this->author->permalink(); ?>"
                                class="username"><?php $this->author(); ?></a>

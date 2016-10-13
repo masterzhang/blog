@@ -15,7 +15,7 @@ $this->need('header.php');
             <h1><?php $this->title() ?></h1>
             <div>
                 <span><?php $this->date('M d,Y'); ?> in&nbsp;</span>
-                <span><?php $this->tags(', ', true, 'none'); ?>&nbsp;by&nbsp;</span>
+                <span><?php $this->category(','); ?>&nbsp;by&nbsp;</span>
                 <span><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a>&nbsp;</span>
                 <span><i class="iconfont">&#xe60d;</i></span>
                 <span class="time"><?php get_post_view($this) ?></span>
