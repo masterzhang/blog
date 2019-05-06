@@ -1,7 +1,7 @@
 <?php
 /**
- * Akina For Typecho移植于WordPress的Akina模板，原作者为 Fuzzz 
- * 
+ * Akina For Typecho移植于WordPress的Akina模板，原作者为 Fuzzz
+ *
  * @package Akina For Typecho
  * @author 灰白衬衫
  * @version 1.2
@@ -42,21 +42,21 @@
 	</div>
 <div class=""></div>
 <div id="content" class="site-content">
-<!-- 判断是否搜索 -->		
+<!-- 判断是否搜索 -->
 <?php if(!$this->is('index') && !$this->is('front')): ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<!-- 判断搜索是否有结果-是 -->	
+		<!-- 判断搜索是否有结果-是 -->
 		<?php if ($this->have()): ?>
 			<header class="page-header">
 			<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下的文章'),'search'=>_t('包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下的文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
 			</header>
-		<!-- 判断搜索是否有结果-否 -->	
+		<!-- 判断搜索是否有结果-否 -->
 		<?php else: ?>
 			<div class="search-box">
 				<form class="s-search">
 					<i class="iconfont">&#xe6f0;</i>
-					<input class="text-input" type="search" name="s" placeholder="搜索...">	
+					<input class="text-input" type="search" name="s" placeholder="搜索...">
 				</form>
 			</div>
 			<section class="no-results not-found">
@@ -71,20 +71,20 @@
 								<?php getRandomPosts('5');?>
 							</ul>
 						</div>
-					</div>	
+					</div>
 				</div>
-			</section>			
-		<?php endif; ?>	
+			</section>
+		<?php endif; ?>
 <?php else: ?>
 <!-- 不是搜索显示主页 -->
 <!-- 顶部公告内容 -->
 <div class="notice">
-	<i class="iconfont">&#xe607;</i> : 
+	<i class="iconfont">&#xe607;</i> :
 		<div class="notice-content">
 		<?php $this->options->NOTICE();?>
 		</div>
 </div>
-<!-- 聚焦内容 -->
+<!-- 聚焦内容
 <div class="top-feature">
 	<h1 class="fes-title">聚焦</h1>
 		<div class="feature-content">
@@ -92,7 +92,7 @@
 			<li class="feature-2"><a href="<?php $this->options->feature2();?>"><div class="feature-title"><span class="foverlay">feature2</span></div><img src="<?php $this->options->themeUrl('images/feature/feature2.jpg'); ?>"></a></li>
 			<li class="feature-3"><a href="<?php $this->options->feature3();?>"><div class="feature-title"><span class="foverlay">feature3</span></div><img src="<?php $this->options->themeUrl('images/feature/feature3.jpg'); ?>"></a></li>
 		</div>
-</div>
+</div> -->
 <!-- 主页内容 -->
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
