@@ -30,22 +30,22 @@
 <body class="home blog hfeed">
 <section id="main-container">
 	 <div class="openNav">
-		<div class="iconflat">	 
+		<div class="iconflat">
 			 <div class="icon"></div>
 		</div>
 			<!-- logo则显示 -->
 			<div class="site-branding">
-			 <div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php $this->options->themeUrl('images/akina.png'); ?>"></a></div>		  
+			 <div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php $this->options->themeUrl('images/akina.png'); ?>"></a></div>
 			</div>
 			<!-- logo 结束 -->
-	 </div>	
+	 </div>
 	 <!-- 主页面显示 -->
 <div id="page" class="site wrapper">
 <header class="site-header" role="banner">
 	<div class="site-top">
 		<!-- logo则显示 -->
 		<div class="site-branding">
-		<div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php $this->options->themeUrl('images/akina.png'); ?>"></a></div>		  
+		<div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php $this->options->themeUrl('images/akina.png'); ?>"></a></div>
 		</div>
 		<!-- logo 结束 -->
 		<div id="login-reg">
@@ -73,7 +73,7 @@
 		<!-- 搜索 -->
 		<div class="searchbox">
 			<i class="iconfont js-toggle-search iconsearch">&#xe6f0;</i>
-		</div> 
+		</div>
 		<!-- 分类 -->
 		<div class="lower">
 			<nav>
@@ -83,12 +83,12 @@
 					<?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
 				</ul>
 				</li>
-				<li><a href="<?php $this->options ->siteUrl(); ?>archives.html">归档</a></li>
+				<li><a href="<?php $this->options ->siteUrl(); ?>index.php/archives.html">归档</a></li>
 				<li><a href="#">更多</a>
 				<ul class="sub-menu">
-					<li><a href="<?php $this->options ->siteUrl(); ?>links.html">邻居</a></li>
-					<li><a href="<?php $this->options ->siteUrl(); ?>message.html">留言</a></li>
-					<li><a href="<?php $this->options ->siteUrl(); ?>about.html">关于</a></li>
+					<li><a href="<?php $this->options ->siteUrl(); ?>index.php/links.html">邻居</a></li>
+					<li><a href="<?php $this->options ->siteUrl(); ?>index.php/message.html">留言</a></li>
+					<li><a href="<?php $this->options ->siteUrl(); ?>index.php/about.html">关于</a></li>
 				</ul>
 				</li>
 				</ul>
